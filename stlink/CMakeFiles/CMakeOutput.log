@@ -1,0 +1,493 @@
+The system is: Linux - 5.10.17-v7l+ - armv7l
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler: /usr/bin/cc 
+Build flags: 
+Id flags:  
+
+The output was:
+0
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+
+The C compiler identification is GNU, found in "/home/pi/st-link_flasher/stlink_flash_rasp/stlink/CMakeFiles/3.16.3/CompilerIdC/a.out"
+
+Determining if the C compiler works passed with the following output:
+Change Dir: /home/pi/st-link_flasher/stlink_flash_rasp/stlink/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_6787c/fast && /usr/bin/make -f CMakeFiles/cmTC_6787c.dir/build.make CMakeFiles/cmTC_6787c.dir/build
+make[1]: Entering directory '/home/pi/st-link_flasher/stlink_flash_rasp/stlink/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_6787c.dir/testCCompiler.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_6787c.dir/testCCompiler.c.o   -c /home/pi/st-link_flasher/stlink_flash_rasp/stlink/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTC_6787c
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6787c.dir/link.txt --verbose=1
+/usr/bin/cc      CMakeFiles/cmTC_6787c.dir/testCCompiler.c.o  -o cmTC_6787c 
+make[1]: Leaving directory '/home/pi/st-link_flasher/stlink_flash_rasp/stlink/CMakeFiles/CMakeTmp'
+
+
+
+Detecting C compiler ABI info compiled with the following output:
+Change Dir: /home/pi/st-link_flasher/stlink_flash_rasp/stlink/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_3d201/fast && /usr/bin/make -f CMakeFiles/cmTC_3d201.dir/build.make CMakeFiles/cmTC_3d201.dir/build
+make[1]: Entering directory '/home/pi/st-link_flasher/stlink_flash_rasp/stlink/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_3d201.dir/CMakeCCompilerABI.c.o
+/usr/bin/cc   -v -o CMakeFiles/cmTC_3d201.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.16/Modules/CMakeCCompilerABI.c
+Using built-in specs.
+COLLECT_GCC=/usr/bin/cc
+Target: arm-linux-gnueabihf
+Configured with: ../src/configure -v --with-pkgversion='Raspbian 8.3.0-6+rpi1' --with-bugurl=file:///usr/share/doc/gcc-8/README.Bugs --enable-languages=c,ada,c++,go,d,fortran,objc,obj-c++ --prefix=/usr --with-gcc-major-version-only --program-suffix=-8 --program-prefix=arm-linux-gnueabihf- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-libitm --disable-libquadmath --disable-libquadmath-support --enable-plugin --with-system-zlib --with-target-system-zlib --enable-objc-gc=auto --enable-multiarch --disable-sjlj-exceptions --with-arch=armv6 --with-fpu=vfp --with-float=hard --disable-werror --enable-checking=release --build=arm-linux-gnueabihf --host=arm-linux-gnueabihf --target=arm-linux-gnueabihf
+Thread model: posix
+gcc version 8.3.0 (Raspbian 8.3.0-6+rpi1) 
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_3d201.dir/CMakeCCompilerABI.c.o' '-c'  '-mfloat-abi=hard' '-mfpu=vfp' '-mtls-dialect=gnu' '-marm' '-march=armv6+fp'
+ /usr/lib/gcc/arm-linux-gnueabihf/8/cc1 -quiet -v -imultilib . -imultiarch arm-linux-gnueabihf /usr/share/cmake-3.16/Modules/CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -mfloat-abi=hard -mfpu=vfp -mtls-dialect=gnu -marm -march=armv6+fp -auxbase-strip CMakeFiles/cmTC_3d201.dir/CMakeCCompilerABI.c.o -version -o /tmp/ccWxObNY.s
+GNU C17 (Raspbian 8.3.0-6+rpi1) version 8.3.0 (arm-linux-gnueabihf)
+	compiled by GNU C version 8.3.0, GMP version 6.1.2, MPFR version 4.0.2, MPC version 1.1.0, isl version isl-0.20-GMP
+
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+ignoring nonexistent directory "/usr/local/include/arm-linux-gnueabihf"
+ignoring nonexistent directory "/usr/lib/gcc/arm-linux-gnueabihf/8/../../../../arm-linux-gnueabihf/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/lib/gcc/arm-linux-gnueabihf/8/include
+ /usr/local/include
+ /usr/lib/gcc/arm-linux-gnueabihf/8/include-fixed
+ /usr/include/arm-linux-gnueabihf
+ /usr/include
+End of search list.
+GNU C17 (Raspbian 8.3.0-6+rpi1) version 8.3.0 (arm-linux-gnueabihf)
+	compiled by GNU C version 8.3.0, GMP version 6.1.2, MPFR version 4.0.2, MPC version 1.1.0, isl version isl-0.20-GMP
+
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+Compiler executable checksum: bcc8c085e8c103b65550a3bb7c44a354
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_3d201.dir/CMakeCCompilerABI.c.o' '-c'  '-mfloat-abi=hard' '-mfpu=vfp' '-mtls-dialect=gnu' '-marm' '-march=armv6+fp'
+ as -v -march=armv6 -mfloat-abi=hard -mfpu=vfp -meabi=5 -o CMakeFiles/cmTC_3d201.dir/CMakeCCompilerABI.c.o /tmp/ccWxObNY.s
+GNU assembler version 2.31.1 (arm-linux-gnueabihf) using BFD version (GNU Binutils for Raspbian) 2.31.1
+COMPILER_PATH=/usr/lib/gcc/arm-linux-gnueabihf/8/:/usr/lib/gcc/arm-linux-gnueabihf/8/:/usr/lib/gcc/arm-linux-gnueabihf/:/usr/lib/gcc/arm-linux-gnueabihf/8/:/usr/lib/gcc/arm-linux-gnueabihf/
+LIBRARY_PATH=/usr/lib/gcc/arm-linux-gnueabihf/8/:/usr/lib/gcc/arm-linux-gnueabihf/8/../../../arm-linux-gnueabihf/:/usr/lib/gcc/arm-linux-gnueabihf/8/../../../:/lib/arm-linux-gnueabihf/:/lib/:/usr/lib/arm-linux-gnueabihf/:/usr/lib/
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_3d201.dir/CMakeCCompilerABI.c.o' '-c'  '-mfloat-abi=hard' '-mfpu=vfp' '-mtls-dialect=gnu' '-marm' '-march=armv6+fp'
+Linking C executable cmTC_3d201
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3d201.dir/link.txt --verbose=1
+/usr/bin/cc     -v CMakeFiles/cmTC_3d201.dir/CMakeCCompilerABI.c.o  -o cmTC_3d201 
+Using built-in specs.
+COLLECT_GCC=/usr/bin/cc
+COLLECT_LTO_WRAPPER=/usr/lib/gcc/arm-linux-gnueabihf/8/lto-wrapper
+Target: arm-linux-gnueabihf
+Configured with: ../src/configure -v --with-pkgversion='Raspbian 8.3.0-6+rpi1' --with-bugurl=file:///usr/share/doc/gcc-8/README.Bugs --enable-languages=c,ada,c++,go,d,fortran,objc,obj-c++ --prefix=/usr --with-gcc-major-version-only --program-suffix=-8 --program-prefix=arm-linux-gnueabihf- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-libitm --disable-libquadmath --disable-libquadmath-support --enable-plugin --with-system-zlib --with-target-system-zlib --enable-objc-gc=auto --enable-multiarch --disable-sjlj-exceptions --with-arch=armv6 --with-fpu=vfp --with-float=hard --disable-werror --enable-checking=release --build=arm-linux-gnueabihf --host=arm-linux-gnueabihf --target=arm-linux-gnueabihf
+Thread model: posix
+gcc version 8.3.0 (Raspbian 8.3.0-6+rpi1) 
+COMPILER_PATH=/usr/lib/gcc/arm-linux-gnueabihf/8/:/usr/lib/gcc/arm-linux-gnueabihf/8/:/usr/lib/gcc/arm-linux-gnueabihf/:/usr/lib/gcc/arm-linux-gnueabihf/8/:/usr/lib/gcc/arm-linux-gnueabihf/
+LIBRARY_PATH=/usr/lib/gcc/arm-linux-gnueabihf/8/:/usr/lib/gcc/arm-linux-gnueabihf/8/../../../arm-linux-gnueabihf/:/usr/lib/gcc/arm-linux-gnueabihf/8/../../../:/lib/arm-linux-gnueabihf/:/lib/:/usr/lib/arm-linux-gnueabihf/:/usr/lib/
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_3d201'  '-mfloat-abi=hard' '-mfpu=vfp' '-mtls-dialect=gnu' '-marm' '-march=armv6+fp'
+ /usr/lib/gcc/arm-linux-gnueabihf/8/collect2 -plugin /usr/lib/gcc/arm-linux-gnueabihf/8/liblto_plugin.so -plugin-opt=/usr/lib/gcc/arm-linux-gnueabihf/8/lto-wrapper -plugin-opt=-fresolution=/tmp/ccqQNBva.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -dynamic-linker /lib/ld-linux-armhf.so.3 -X --hash-style=gnu -m armelf_linux_eabi -o cmTC_3d201 /usr/lib/gcc/arm-linux-gnueabihf/8/../../../arm-linux-gnueabihf/crt1.o /usr/lib/gcc/arm-linux-gnueabihf/8/../../../arm-linux-gnueabihf/crti.o /usr/lib/gcc/arm-linux-gnueabihf/8/crtbegin.o -L/usr/lib/gcc/arm-linux-gnueabihf/8 -L/usr/lib/gcc/arm-linux-gnueabihf/8/../../../arm-linux-gnueabihf -L/usr/lib/gcc/arm-linux-gnueabihf/8/../../.. -L/lib/arm-linux-gnueabihf -L/usr/lib/arm-linux-gnueabihf CMakeFiles/cmTC_3d201.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/arm-linux-gnueabihf/8/crtend.o /usr/lib/gcc/arm-linux-gnueabihf/8/../../../arm-linux-gnueabihf/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_3d201'  '-mfloat-abi=hard' '-mfpu=vfp' '-mtls-dialect=gnu' '-marm' '-march=armv6+fp'
+make[1]: Leaving directory '/home/pi/st-link_flasher/stlink_flash_rasp/stlink/CMakeFiles/CMakeTmp'
+
+
+
+Parsed C implicit include dir info from above output: rv=done
+  found start of include info
+  found start of implicit include info
+    add: [/usr/lib/gcc/arm-linux-gnueabihf/8/include]
+    add: [/usr/local/include]
+    add: [/usr/lib/gcc/arm-linux-gnueabihf/8/include-fixed]
+    add: [/usr/include/arm-linux-gnueabihf]
+    add: [/usr/include]
+  end of search list found
+  collapse include dir [/usr/lib/gcc/arm-linux-gnueabihf/8/include] ==> [/usr/lib/gcc/arm-linux-gnueabihf/8/include]
+  collapse include dir [/usr/local/include] ==> [/usr/local/include]
+  collapse include dir [/usr/lib/gcc/arm-linux-gnueabihf/8/include-fixed] ==> [/usr/lib/gcc/arm-linux-gnueabihf/8/include-fixed]
+  collapse include dir [/usr/include/arm-linux-gnueabihf] ==> [/usr/include/arm-linux-gnueabihf]
+  collapse include dir [/usr/include] ==> [/usr/include]
+  implicit include dirs: [/usr/lib/gcc/arm-linux-gnueabihf/8/include;/usr/local/include;/usr/lib/gcc/arm-linux-gnueabihf/8/include-fixed;/usr/include/arm-linux-gnueabihf;/usr/include]
+
+
+Parsed C implicit link information from above output:
+  link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /home/pi/st-link_flasher/stlink_flash_rasp/stlink/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command(s):/usr/bin/make cmTC_3d201/fast && /usr/bin/make -f CMakeFiles/cmTC_3d201.dir/build.make CMakeFiles/cmTC_3d201.dir/build]
+  ignore line: [make[1]: Entering directory '/home/pi/st-link_flasher/stlink_flash_rasp/stlink/CMakeFiles/CMakeTmp']
+  ignore line: [Building C object CMakeFiles/cmTC_3d201.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/usr/bin/cc   -v -o CMakeFiles/cmTC_3d201.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.16/Modules/CMakeCCompilerABI.c]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/usr/bin/cc]
+  ignore line: [Target: arm-linux-gnueabihf]
+  ignore line: [Configured with: ../src/configure -v --with-pkgversion='Raspbian 8.3.0-6+rpi1' --with-bugurl=file:///usr/share/doc/gcc-8/README.Bugs --enable-languages=c ada c++ go d fortran objc obj-c++ --prefix=/usr --with-gcc-major-version-only --program-suffix=-8 --program-prefix=arm-linux-gnueabihf- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-libitm --disable-libquadmath --disable-libquadmath-support --enable-plugin --with-system-zlib --with-target-system-zlib --enable-objc-gc=auto --enable-multiarch --disable-sjlj-exceptions --with-arch=armv6 --with-fpu=vfp --with-float=hard --disable-werror --enable-checking=release --build=arm-linux-gnueabihf --host=arm-linux-gnueabihf --target=arm-linux-gnueabihf]
+  ignore line: [Thread model: posix]
+  ignore line: [gcc version 8.3.0 (Raspbian 8.3.0-6+rpi1) ]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_3d201.dir/CMakeCCompilerABI.c.o' '-c'  '-mfloat-abi=hard' '-mfpu=vfp' '-mtls-dialect=gnu' '-marm' '-march=armv6+fp']
+  ignore line: [ /usr/lib/gcc/arm-linux-gnueabihf/8/cc1 -quiet -v -imultilib . -imultiarch arm-linux-gnueabihf /usr/share/cmake-3.16/Modules/CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -mfloat-abi=hard -mfpu=vfp -mtls-dialect=gnu -marm -march=armv6+fp -auxbase-strip CMakeFiles/cmTC_3d201.dir/CMakeCCompilerABI.c.o -version -o /tmp/ccWxObNY.s]
+  ignore line: [GNU C17 (Raspbian 8.3.0-6+rpi1) version 8.3.0 (arm-linux-gnueabihf)]
+  ignore line: [	compiled by GNU C version 8.3.0  GMP version 6.1.2  MPFR version 4.0.2  MPC version 1.1.0  isl version isl-0.20-GMP]
+  ignore line: []
+  ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+  ignore line: [ignoring nonexistent directory "/usr/local/include/arm-linux-gnueabihf"]
+  ignore line: [ignoring nonexistent directory "/usr/lib/gcc/arm-linux-gnueabihf/8/../../../../arm-linux-gnueabihf/include"]
+  ignore line: [#include "..." search starts here:]
+  ignore line: [#include <...> search starts here:]
+  ignore line: [ /usr/lib/gcc/arm-linux-gnueabihf/8/include]
+  ignore line: [ /usr/local/include]
+  ignore line: [ /usr/lib/gcc/arm-linux-gnueabihf/8/include-fixed]
+  ignore line: [ /usr/include/arm-linux-gnueabihf]
+  ignore line: [ /usr/include]
+  ignore line: [End of search list.]
+  ignore line: [GNU C17 (Raspbian 8.3.0-6+rpi1) version 8.3.0 (arm-linux-gnueabihf)]
+  ignore line: [	compiled by GNU C version 8.3.0  GMP version 6.1.2  MPFR version 4.0.2  MPC version 1.1.0  isl version isl-0.20-GMP]
+  ignore line: []
+  ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+  ignore line: [Compiler executable checksum: bcc8c085e8c103b65550a3bb7c44a354]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_3d201.dir/CMakeCCompilerABI.c.o' '-c'  '-mfloat-abi=hard' '-mfpu=vfp' '-mtls-dialect=gnu' '-marm' '-march=armv6+fp']
+  ignore line: [ as -v -march=armv6 -mfloat-abi=hard -mfpu=vfp -meabi=5 -o CMakeFiles/cmTC_3d201.dir/CMakeCCompilerABI.c.o /tmp/ccWxObNY.s]
+  ignore line: [GNU assembler version 2.31.1 (arm-linux-gnueabihf) using BFD version (GNU Binutils for Raspbian) 2.31.1]
+  ignore line: [COMPILER_PATH=/usr/lib/gcc/arm-linux-gnueabihf/8/:/usr/lib/gcc/arm-linux-gnueabihf/8/:/usr/lib/gcc/arm-linux-gnueabihf/:/usr/lib/gcc/arm-linux-gnueabihf/8/:/usr/lib/gcc/arm-linux-gnueabihf/]
+  ignore line: [LIBRARY_PATH=/usr/lib/gcc/arm-linux-gnueabihf/8/:/usr/lib/gcc/arm-linux-gnueabihf/8/../../../arm-linux-gnueabihf/:/usr/lib/gcc/arm-linux-gnueabihf/8/../../../:/lib/arm-linux-gnueabihf/:/lib/:/usr/lib/arm-linux-gnueabihf/:/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_3d201.dir/CMakeCCompilerABI.c.o' '-c'  '-mfloat-abi=hard' '-mfpu=vfp' '-mtls-dialect=gnu' '-marm' '-march=armv6+fp']
+  ignore line: [Linking C executable cmTC_3d201]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3d201.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/cc     -v CMakeFiles/cmTC_3d201.dir/CMakeCCompilerABI.c.o  -o cmTC_3d201 ]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/usr/bin/cc]
+  ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/arm-linux-gnueabihf/8/lto-wrapper]
+  ignore line: [Target: arm-linux-gnueabihf]
+  ignore line: [Configured with: ../src/configure -v --with-pkgversion='Raspbian 8.3.0-6+rpi1' --with-bugurl=file:///usr/share/doc/gcc-8/README.Bugs --enable-languages=c ada c++ go d fortran objc obj-c++ --prefix=/usr --with-gcc-major-version-only --program-suffix=-8 --program-prefix=arm-linux-gnueabihf- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-libitm --disable-libquadmath --disable-libquadmath-support --enable-plugin --with-system-zlib --with-target-system-zlib --enable-objc-gc=auto --enable-multiarch --disable-sjlj-exceptions --with-arch=armv6 --with-fpu=vfp --with-float=hard --disable-werror --enable-checking=release --build=arm-linux-gnueabihf --host=arm-linux-gnueabihf --target=arm-linux-gnueabihf]
+  ignore line: [Thread model: posix]
+  ignore line: [gcc version 8.3.0 (Raspbian 8.3.0-6+rpi1) ]
+  ignore line: [COMPILER_PATH=/usr/lib/gcc/arm-linux-gnueabihf/8/:/usr/lib/gcc/arm-linux-gnueabihf/8/:/usr/lib/gcc/arm-linux-gnueabihf/:/usr/lib/gcc/arm-linux-gnueabihf/8/:/usr/lib/gcc/arm-linux-gnueabihf/]
+  ignore line: [LIBRARY_PATH=/usr/lib/gcc/arm-linux-gnueabihf/8/:/usr/lib/gcc/arm-linux-gnueabihf/8/../../../arm-linux-gnueabihf/:/usr/lib/gcc/arm-linux-gnueabihf/8/../../../:/lib/arm-linux-gnueabihf/:/lib/:/usr/lib/arm-linux-gnueabihf/:/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_3d201'  '-mfloat-abi=hard' '-mfpu=vfp' '-mtls-dialect=gnu' '-marm' '-march=armv6+fp']
+  link line: [ /usr/lib/gcc/arm-linux-gnueabihf/8/collect2 -plugin /usr/lib/gcc/arm-linux-gnueabihf/8/liblto_plugin.so -plugin-opt=/usr/lib/gcc/arm-linux-gnueabihf/8/lto-wrapper -plugin-opt=-fresolution=/tmp/ccqQNBva.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -dynamic-linker /lib/ld-linux-armhf.so.3 -X --hash-style=gnu -m armelf_linux_eabi -o cmTC_3d201 /usr/lib/gcc/arm-linux-gnueabihf/8/../../../arm-linux-gnueabihf/crt1.o /usr/lib/gcc/arm-linux-gnueabihf/8/../../../arm-linux-gnueabihf/crti.o /usr/lib/gcc/arm-linux-gnueabihf/8/crtbegin.o -L/usr/lib/gcc/arm-linux-gnueabihf/8 -L/usr/lib/gcc/arm-linux-gnueabihf/8/../../../arm-linux-gnueabihf -L/usr/lib/gcc/arm-linux-gnueabihf/8/../../.. -L/lib/arm-linux-gnueabihf -L/usr/lib/arm-linux-gnueabihf CMakeFiles/cmTC_3d201.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/arm-linux-gnueabihf/8/crtend.o /usr/lib/gcc/arm-linux-gnueabihf/8/../../../arm-linux-gnueabihf/crtn.o]
+    arg [/usr/lib/gcc/arm-linux-gnueabihf/8/collect2] ==> ignore
+    arg [-plugin] ==> ignore
+    arg [/usr/lib/gcc/arm-linux-gnueabihf/8/liblto_plugin.so] ==> ignore
+    arg [-plugin-opt=/usr/lib/gcc/arm-linux-gnueabihf/8/lto-wrapper] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccqQNBva.res] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [-plugin-opt=-pass-through=-lc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [--build-id] ==> ignore
+    arg [--eh-frame-hdr] ==> ignore
+    arg [-dynamic-linker] ==> ignore
+    arg [/lib/ld-linux-armhf.so.3] ==> ignore
+    arg [-X] ==> ignore
+    arg [--hash-style=gnu] ==> ignore
+    arg [-m] ==> ignore
+    arg [armelf_linux_eabi] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTC_3d201] ==> ignore
+    arg [/usr/lib/gcc/arm-linux-gnueabihf/8/../../../arm-linux-gnueabihf/crt1.o] ==> ignore
+    arg [/usr/lib/gcc/arm-linux-gnueabihf/8/../../../arm-linux-gnueabihf/crti.o] ==> ignore
+    arg [/usr/lib/gcc/arm-linux-gnueabihf/8/crtbegin.o] ==> ignore
+    arg [-L/usr/lib/gcc/arm-linux-gnueabihf/8] ==> dir [/usr/lib/gcc/arm-linux-gnueabihf/8]
+    arg [-L/usr/lib/gcc/arm-linux-gnueabihf/8/../../../arm-linux-gnueabihf] ==> dir [/usr/lib/gcc/arm-linux-gnueabihf/8/../../../arm-linux-gnueabihf]
+    arg [-L/usr/lib/gcc/arm-linux-gnueabihf/8/../../..] ==> dir [/usr/lib/gcc/arm-linux-gnueabihf/8/../../..]
+    arg [-L/lib/arm-linux-gnueabihf] ==> dir [/lib/arm-linux-gnueabihf]
+    arg [-L/usr/lib/arm-linux-gnueabihf] ==> dir [/usr/lib/arm-linux-gnueabihf]
+    arg [CMakeFiles/cmTC_3d201.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [-lgcc] ==> lib [gcc]
+    arg [--push-state] ==> ignore
+    arg [--as-needed] ==> ignore
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [--pop-state] ==> ignore
+    arg [-lc] ==> lib [c]
+    arg [-lgcc] ==> lib [gcc]
+    arg [--push-state] ==> ignore
+    arg [--as-needed] ==> ignore
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [--pop-state] ==> ignore
+    arg [/usr/lib/gcc/arm-linux-gnueabihf/8/crtend.o] ==> ignore
+    arg [/usr/lib/gcc/arm-linux-gnueabihf/8/../../../arm-linux-gnueabihf/crtn.o] ==> ignore
+  collapse library dir [/usr/lib/gcc/arm-linux-gnueabihf/8] ==> [/usr/lib/gcc/arm-linux-gnueabihf/8]
+  collapse library dir [/usr/lib/gcc/arm-linux-gnueabihf/8/../../../arm-linux-gnueabihf] ==> [/usr/lib/arm-linux-gnueabihf]
+  collapse library dir [/usr/lib/gcc/arm-linux-gnueabihf/8/../../..] ==> [/usr/lib]
+  collapse library dir [/lib/arm-linux-gnueabihf] ==> [/lib/arm-linux-gnueabihf]
+  collapse library dir [/usr/lib/arm-linux-gnueabihf] ==> [/usr/lib/arm-linux-gnueabihf]
+  implicit libs: [gcc;gcc_s;c;gcc;gcc_s]
+  implicit dirs: [/usr/lib/gcc/arm-linux-gnueabihf/8;/usr/lib/arm-linux-gnueabihf;/usr/lib;/lib/arm-linux-gnueabihf]
+  implicit fwks: []
+
+
+Performing C SOURCE FILE Test C_SUPPORTS_STD_GNU11 succeeded with the following output:
+Change Dir: /home/pi/st-link_flasher/stlink_flash_rasp/stlink/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_6ce24/fast && /usr/bin/make -f CMakeFiles/cmTC_6ce24.dir/build.make CMakeFiles/cmTC_6ce24.dir/build
+make[1]: Entering directory '/home/pi/st-link_flasher/stlink_flash_rasp/stlink/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_6ce24.dir/src.c.o
+/usr/bin/cc   -DC_SUPPORTS_STD_GNU11   -std=gnu11 -o CMakeFiles/cmTC_6ce24.dir/src.c.o   -c /home/pi/st-link_flasher/stlink_flash_rasp/stlink/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_6ce24
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6ce24.dir/link.txt --verbose=1
+/usr/bin/cc  -DC_SUPPORTS_STD_GNU11    CMakeFiles/cmTC_6ce24.dir/src.c.o  -o cmTC_6ce24 
+make[1]: Leaving directory '/home/pi/st-link_flasher/stlink_flash_rasp/stlink/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test C_SUPPORTS_STD_GNU18 succeeded with the following output:
+Change Dir: /home/pi/st-link_flasher/stlink_flash_rasp/stlink/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_2a35c/fast && /usr/bin/make -f CMakeFiles/cmTC_2a35c.dir/build.make CMakeFiles/cmTC_2a35c.dir/build
+make[1]: Entering directory '/home/pi/st-link_flasher/stlink_flash_rasp/stlink/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_2a35c.dir/src.c.o
+/usr/bin/cc   -std=gnu11 -DC_SUPPORTS_STD_GNU18   -std=gnu18 -o CMakeFiles/cmTC_2a35c.dir/src.c.o   -c /home/pi/st-link_flasher/stlink_flash_rasp/stlink/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_2a35c
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2a35c.dir/link.txt --verbose=1
+/usr/bin/cc  -std=gnu11 -DC_SUPPORTS_STD_GNU18    CMakeFiles/cmTC_2a35c.dir/src.c.o  -o cmTC_2a35c 
+make[1]: Leaving directory '/home/pi/st-link_flasher/stlink_flash_rasp/stlink/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test C_SUPPORTS_WALL succeeded with the following output:
+Change Dir: /home/pi/st-link_flasher/stlink_flash_rasp/stlink/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_4cdcd/fast && /usr/bin/make -f CMakeFiles/cmTC_4cdcd.dir/build.make CMakeFiles/cmTC_4cdcd.dir/build
+make[1]: Entering directory '/home/pi/st-link_flasher/stlink_flash_rasp/stlink/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_4cdcd.dir/src.c.o
+/usr/bin/cc   -std=gnu11 -std=gnu18 -DC_SUPPORTS_WALL   -Wall -o CMakeFiles/cmTC_4cdcd.dir/src.c.o   -c /home/pi/st-link_flasher/stlink_flash_rasp/stlink/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_4cdcd
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4cdcd.dir/link.txt --verbose=1
+/usr/bin/cc  -std=gnu11 -std=gnu18 -DC_SUPPORTS_WALL    CMakeFiles/cmTC_4cdcd.dir/src.c.o  -o cmTC_4cdcd 
+make[1]: Leaving directory '/home/pi/st-link_flasher/stlink_flash_rasp/stlink/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test C_SUPPORTS_WEXTRA succeeded with the following output:
+Change Dir: /home/pi/st-link_flasher/stlink_flash_rasp/stlink/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_91c52/fast && /usr/bin/make -f CMakeFiles/cmTC_91c52.dir/build.make CMakeFiles/cmTC_91c52.dir/build
+make[1]: Entering directory '/home/pi/st-link_flasher/stlink_flash_rasp/stlink/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_91c52.dir/src.c.o
+/usr/bin/cc   -std=gnu11 -std=gnu18 -Wall -DC_SUPPORTS_WEXTRA   -Wextra -o CMakeFiles/cmTC_91c52.dir/src.c.o   -c /home/pi/st-link_flasher/stlink_flash_rasp/stlink/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_91c52
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_91c52.dir/link.txt --verbose=1
+/usr/bin/cc  -std=gnu11 -std=gnu18 -Wall -DC_SUPPORTS_WEXTRA    CMakeFiles/cmTC_91c52.dir/src.c.o  -o cmTC_91c52 
+make[1]: Leaving directory '/home/pi/st-link_flasher/stlink_flash_rasp/stlink/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test C_SUPPORTS_WSHADOW succeeded with the following output:
+Change Dir: /home/pi/st-link_flasher/stlink_flash_rasp/stlink/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_e59f3/fast && /usr/bin/make -f CMakeFiles/cmTC_e59f3.dir/build.make CMakeFiles/cmTC_e59f3.dir/build
+make[1]: Entering directory '/home/pi/st-link_flasher/stlink_flash_rasp/stlink/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_e59f3.dir/src.c.o
+/usr/bin/cc   -std=gnu11 -std=gnu18 -Wall -Wextra -DC_SUPPORTS_WSHADOW   -Wshadow -o CMakeFiles/cmTC_e59f3.dir/src.c.o   -c /home/pi/st-link_flasher/stlink_flash_rasp/stlink/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_e59f3
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e59f3.dir/link.txt --verbose=1
+/usr/bin/cc  -std=gnu11 -std=gnu18 -Wall -Wextra -DC_SUPPORTS_WSHADOW    CMakeFiles/cmTC_e59f3.dir/src.c.o  -o cmTC_e59f3 
+make[1]: Leaving directory '/home/pi/st-link_flasher/stlink_flash_rasp/stlink/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test C_SUPPORTS_D_FORTIFY_SOURCE_2 succeeded with the following output:
+Change Dir: /home/pi/st-link_flasher/stlink_flash_rasp/stlink/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_363ba/fast && /usr/bin/make -f CMakeFiles/cmTC_363ba.dir/build.make CMakeFiles/cmTC_363ba.dir/build
+make[1]: Entering directory '/home/pi/st-link_flasher/stlink_flash_rasp/stlink/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_363ba.dir/src.c.o
+/usr/bin/cc -D_FORTIFY_SOURCE=2  -std=gnu11 -std=gnu18 -Wall -Wextra -Wshadow -DC_SUPPORTS_D_FORTIFY_SOURCE_2   -o CMakeFiles/cmTC_363ba.dir/src.c.o   -c /home/pi/st-link_flasher/stlink_flash_rasp/stlink/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_363ba
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_363ba.dir/link.txt --verbose=1
+/usr/bin/cc  -std=gnu11 -std=gnu18 -Wall -Wextra -Wshadow -DC_SUPPORTS_D_FORTIFY_SOURCE_2    CMakeFiles/cmTC_363ba.dir/src.c.o  -o cmTC_363ba 
+make[1]: Leaving directory '/home/pi/st-link_flasher/stlink_flash_rasp/stlink/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test C_SUPPORTS_FSTRICT_ALIASING succeeded with the following output:
+Change Dir: /home/pi/st-link_flasher/stlink_flash_rasp/stlink/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_d71d8/fast && /usr/bin/make -f CMakeFiles/cmTC_d71d8.dir/build.make CMakeFiles/cmTC_d71d8.dir/build
+make[1]: Entering directory '/home/pi/st-link_flasher/stlink_flash_rasp/stlink/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_d71d8.dir/src.c.o
+/usr/bin/cc   -std=gnu11 -std=gnu18 -Wall -Wextra -Wshadow -D_FORTIFY_SOURCE=2 -DC_SUPPORTS_FSTRICT_ALIASING   -fstrict-aliasing -o CMakeFiles/cmTC_d71d8.dir/src.c.o   -c /home/pi/st-link_flasher/stlink_flash_rasp/stlink/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_d71d8
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d71d8.dir/link.txt --verbose=1
+/usr/bin/cc  -std=gnu11 -std=gnu18 -Wall -Wextra -Wshadow -D_FORTIFY_SOURCE=2 -DC_SUPPORTS_FSTRICT_ALIASING    CMakeFiles/cmTC_d71d8.dir/src.c.o  -o cmTC_d71d8 
+make[1]: Leaving directory '/home/pi/st-link_flasher/stlink_flash_rasp/stlink/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test C_SUPPORTS_WUNDEF succeeded with the following output:
+Change Dir: /home/pi/st-link_flasher/stlink_flash_rasp/stlink/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_04ee8/fast && /usr/bin/make -f CMakeFiles/cmTC_04ee8.dir/build.make CMakeFiles/cmTC_04ee8.dir/build
+make[1]: Entering directory '/home/pi/st-link_flasher/stlink_flash_rasp/stlink/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_04ee8.dir/src.c.o
+/usr/bin/cc   -std=gnu11 -std=gnu18 -Wall -Wextra -Wshadow -D_FORTIFY_SOURCE=2 -fstrict-aliasing -DC_SUPPORTS_WUNDEF   -Wundef -o CMakeFiles/cmTC_04ee8.dir/src.c.o   -c /home/pi/st-link_flasher/stlink_flash_rasp/stlink/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_04ee8
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_04ee8.dir/link.txt --verbose=1
+/usr/bin/cc  -std=gnu11 -std=gnu18 -Wall -Wextra -Wshadow -D_FORTIFY_SOURCE=2 -fstrict-aliasing -DC_SUPPORTS_WUNDEF    CMakeFiles/cmTC_04ee8.dir/src.c.o  -o cmTC_04ee8 
+make[1]: Leaving directory '/home/pi/st-link_flasher/stlink_flash_rasp/stlink/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test C_SUPPORTS_WFORMAT succeeded with the following output:
+Change Dir: /home/pi/st-link_flasher/stlink_flash_rasp/stlink/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_80261/fast && /usr/bin/make -f CMakeFiles/cmTC_80261.dir/build.make CMakeFiles/cmTC_80261.dir/build
+make[1]: Entering directory '/home/pi/st-link_flasher/stlink_flash_rasp/stlink/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_80261.dir/src.c.o
+/usr/bin/cc   -std=gnu11 -std=gnu18 -Wall -Wextra -Wshadow -D_FORTIFY_SOURCE=2 -fstrict-aliasing -Wundef -DC_SUPPORTS_WFORMAT   -Wformat -o CMakeFiles/cmTC_80261.dir/src.c.o   -c /home/pi/st-link_flasher/stlink_flash_rasp/stlink/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_80261
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_80261.dir/link.txt --verbose=1
+/usr/bin/cc  -std=gnu11 -std=gnu18 -Wall -Wextra -Wshadow -D_FORTIFY_SOURCE=2 -fstrict-aliasing -Wundef -DC_SUPPORTS_WFORMAT    CMakeFiles/cmTC_80261.dir/src.c.o  -o cmTC_80261 
+make[1]: Leaving directory '/home/pi/st-link_flasher/stlink_flash_rasp/stlink/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test C_SUPPORTS_WFORMAT_SECURITY succeeded with the following output:
+Change Dir: /home/pi/st-link_flasher/stlink_flash_rasp/stlink/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_8b85c/fast && /usr/bin/make -f CMakeFiles/cmTC_8b85c.dir/build.make CMakeFiles/cmTC_8b85c.dir/build
+make[1]: Entering directory '/home/pi/st-link_flasher/stlink_flash_rasp/stlink/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_8b85c.dir/src.c.o
+/usr/bin/cc   -std=gnu11 -std=gnu18 -Wall -Wextra -Wshadow -D_FORTIFY_SOURCE=2 -fstrict-aliasing -Wundef -Wformat -DC_SUPPORTS_WFORMAT_SECURITY   -Wformat-security -o CMakeFiles/cmTC_8b85c.dir/src.c.o   -c /home/pi/st-link_flasher/stlink_flash_rasp/stlink/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_8b85c
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8b85c.dir/link.txt --verbose=1
+/usr/bin/cc  -std=gnu11 -std=gnu18 -Wall -Wextra -Wshadow -D_FORTIFY_SOURCE=2 -fstrict-aliasing -Wundef -Wformat -DC_SUPPORTS_WFORMAT_SECURITY    CMakeFiles/cmTC_8b85c.dir/src.c.o  -o cmTC_8b85c 
+make[1]: Leaving directory '/home/pi/st-link_flasher/stlink_flash_rasp/stlink/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test C_SUPPORTS_WMAYBE_UNINITIALIZED succeeded with the following output:
+Change Dir: /home/pi/st-link_flasher/stlink_flash_rasp/stlink/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_f58fa/fast && /usr/bin/make -f CMakeFiles/cmTC_f58fa.dir/build.make CMakeFiles/cmTC_f58fa.dir/build
+make[1]: Entering directory '/home/pi/st-link_flasher/stlink_flash_rasp/stlink/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_f58fa.dir/src.c.o
+/usr/bin/cc   -std=gnu11 -std=gnu18 -Wall -Wextra -Wshadow -D_FORTIFY_SOURCE=2 -fstrict-aliasing -Wundef -Wformat -Wformat-security -DC_SUPPORTS_WMAYBE_UNINITIALIZED   -Wmaybe-uninitialized -o CMakeFiles/cmTC_f58fa.dir/src.c.o   -c /home/pi/st-link_flasher/stlink_flash_rasp/stlink/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_f58fa
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f58fa.dir/link.txt --verbose=1
+/usr/bin/cc  -std=gnu11 -std=gnu18 -Wall -Wextra -Wshadow -D_FORTIFY_SOURCE=2 -fstrict-aliasing -Wundef -Wformat -Wformat-security -DC_SUPPORTS_WMAYBE_UNINITIALIZED    CMakeFiles/cmTC_f58fa.dir/src.c.o  -o cmTC_f58fa 
+make[1]: Leaving directory '/home/pi/st-link_flasher/stlink_flash_rasp/stlink/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test C_SUPPORTS_WIMPLICIT_FUNCTION_DECLARATION succeeded with the following output:
+Change Dir: /home/pi/st-link_flasher/stlink_flash_rasp/stlink/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_1353f/fast && /usr/bin/make -f CMakeFiles/cmTC_1353f.dir/build.make CMakeFiles/cmTC_1353f.dir/build
+make[1]: Entering directory '/home/pi/st-link_flasher/stlink_flash_rasp/stlink/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_1353f.dir/src.c.o
+/usr/bin/cc   -std=gnu11 -std=gnu18 -Wall -Wextra -Wshadow -D_FORTIFY_SOURCE=2 -fstrict-aliasing -Wundef -Wformat -Wformat-security -Wmaybe-uninitialized -DC_SUPPORTS_WIMPLICIT_FUNCTION_DECLARATION   -Wimplicit-function-declaration -o CMakeFiles/cmTC_1353f.dir/src.c.o   -c /home/pi/st-link_flasher/stlink_flash_rasp/stlink/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_1353f
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1353f.dir/link.txt --verbose=1
+/usr/bin/cc  -std=gnu11 -std=gnu18 -Wall -Wextra -Wshadow -D_FORTIFY_SOURCE=2 -fstrict-aliasing -Wundef -Wformat -Wformat-security -Wmaybe-uninitialized -DC_SUPPORTS_WIMPLICIT_FUNCTION_DECLARATION    CMakeFiles/cmTC_1353f.dir/src.c.o  -o cmTC_1353f 
+make[1]: Leaving directory '/home/pi/st-link_flasher/stlink_flash_rasp/stlink/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test C_SUPPORTS_WREDUNDANT_DECLS succeeded with the following output:
+Change Dir: /home/pi/st-link_flasher/stlink_flash_rasp/stlink/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_81778/fast && /usr/bin/make -f CMakeFiles/cmTC_81778.dir/build.make CMakeFiles/cmTC_81778.dir/build
+make[1]: Entering directory '/home/pi/st-link_flasher/stlink_flash_rasp/stlink/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_81778.dir/src.c.o
+/usr/bin/cc   -std=gnu11 -std=gnu18 -Wall -Wextra -Wshadow -D_FORTIFY_SOURCE=2 -fstrict-aliasing -Wundef -Wformat -Wformat-security -Wmaybe-uninitialized -Wimplicit-function-declaration -DC_SUPPORTS_WREDUNDANT_DECLS   -Wredundant-decls -o CMakeFiles/cmTC_81778.dir/src.c.o   -c /home/pi/st-link_flasher/stlink_flash_rasp/stlink/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_81778
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_81778.dir/link.txt --verbose=1
+/usr/bin/cc  -std=gnu11 -std=gnu18 -Wall -Wextra -Wshadow -D_FORTIFY_SOURCE=2 -fstrict-aliasing -Wundef -Wformat -Wformat-security -Wmaybe-uninitialized -Wimplicit-function-declaration -DC_SUPPORTS_WREDUNDANT_DECLS    CMakeFiles/cmTC_81778.dir/src.c.o  -o cmTC_81778 
+make[1]: Leaving directory '/home/pi/st-link_flasher/stlink_flash_rasp/stlink/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test C_SUPPORTS_FPIC succeeded with the following output:
+Change Dir: /home/pi/st-link_flasher/stlink_flash_rasp/stlink/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_b50c2/fast && /usr/bin/make -f CMakeFiles/cmTC_b50c2.dir/build.make CMakeFiles/cmTC_b50c2.dir/build
+make[1]: Entering directory '/home/pi/st-link_flasher/stlink_flash_rasp/stlink/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_b50c2.dir/src.c.o
+/usr/bin/cc   -std=gnu11 -std=gnu18 -Wall -Wextra -Wshadow -D_FORTIFY_SOURCE=2 -fstrict-aliasing -Wundef -Wformat -Wformat-security -Wmaybe-uninitialized -Wimplicit-function-declaration -Wredundant-decls -DC_SUPPORTS_FPIC   -fPIC -o CMakeFiles/cmTC_b50c2.dir/src.c.o   -c /home/pi/st-link_flasher/stlink_flash_rasp/stlink/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_b50c2
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b50c2.dir/link.txt --verbose=1
+/usr/bin/cc  -std=gnu11 -std=gnu18 -Wall -Wextra -Wshadow -D_FORTIFY_SOURCE=2 -fstrict-aliasing -Wundef -Wformat -Wformat-security -Wmaybe-uninitialized -Wimplicit-function-declaration -Wredundant-decls -DC_SUPPORTS_FPIC    CMakeFiles/cmTC_b50c2.dir/src.c.o  -o cmTC_b50c2 
+make[1]: Leaving directory '/home/pi/st-link_flasher/stlink_flash_rasp/stlink/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test C_SUPPORTS_O2 succeeded with the following output:
+Change Dir: /home/pi/st-link_flasher/stlink_flash_rasp/stlink/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_e3bf5/fast && /usr/bin/make -f CMakeFiles/cmTC_e3bf5.dir/build.make CMakeFiles/cmTC_e3bf5.dir/build
+make[1]: Entering directory '/home/pi/st-link_flasher/stlink_flash_rasp/stlink/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_e3bf5.dir/src.c.o
+/usr/bin/cc   -std=gnu11 -std=gnu18 -Wall -Wextra -Wshadow -D_FORTIFY_SOURCE=2 -fstrict-aliasing -Wundef -Wformat -Wformat-security -Wmaybe-uninitialized -Wimplicit-function-declaration -Wredundant-decls -fPIC -DC_SUPPORTS_O2   -O2 -o CMakeFiles/cmTC_e3bf5.dir/src.c.o   -c /home/pi/st-link_flasher/stlink_flash_rasp/stlink/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_e3bf5
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e3bf5.dir/link.txt --verbose=1
+/usr/bin/cc  -std=gnu11 -std=gnu18 -Wall -Wextra -Wshadow -D_FORTIFY_SOURCE=2 -fstrict-aliasing -Wundef -Wformat -Wformat-security -Wmaybe-uninitialized -Wimplicit-function-declaration -Wredundant-decls -fPIC -DC_SUPPORTS_O2    CMakeFiles/cmTC_e3bf5.dir/src.c.o  -o cmTC_e3bf5 
+make[1]: Leaving directory '/home/pi/st-link_flasher/stlink_flash_rasp/stlink/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test C_SUPPORTS_WERROR succeeded with the following output:
+Change Dir: /home/pi/st-link_flasher/stlink_flash_rasp/stlink/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_39008/fast && /usr/bin/make -f CMakeFiles/cmTC_39008.dir/build.make CMakeFiles/cmTC_39008.dir/build
+make[1]: Entering directory '/home/pi/st-link_flasher/stlink_flash_rasp/stlink/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_39008.dir/src.c.o
+/usr/bin/cc   -std=gnu11 -std=gnu18 -Wall -Wextra -Wshadow -D_FORTIFY_SOURCE=2 -fstrict-aliasing -Wundef -Wformat -Wformat-security -Wmaybe-uninitialized -Wimplicit-function-declaration -Wredundant-decls -fPIC -O2 -DC_SUPPORTS_WERROR   -Werror -o CMakeFiles/cmTC_39008.dir/src.c.o   -c /home/pi/st-link_flasher/stlink_flash_rasp/stlink/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_39008
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_39008.dir/link.txt --verbose=1
+/usr/bin/cc  -std=gnu11 -std=gnu18 -Wall -Wextra -Wshadow -D_FORTIFY_SOURCE=2 -fstrict-aliasing -Wundef -Wformat -Wformat-security -Wmaybe-uninitialized -Wimplicit-function-declaration -Wredundant-decls -fPIC -O2 -DC_SUPPORTS_WERROR    CMakeFiles/cmTC_39008.dir/src.c.o  -o cmTC_39008 
+make[1]: Leaving directory '/home/pi/st-link_flasher/stlink_flash_rasp/stlink/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+int main(void) { return 0; }
+Determining if the include file sys/mman.h exists passed with the following output:
+Change Dir: /home/pi/st-link_flasher/stlink_flash_rasp/stlink/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_3f783/fast && /usr/bin/make -f CMakeFiles/cmTC_3f783.dir/build.make CMakeFiles/cmTC_3f783.dir/build
+make[1]: Entering directory '/home/pi/st-link_flasher/stlink_flash_rasp/stlink/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_3f783.dir/CheckIncludeFile.c.o
+/usr/bin/cc   -std=gnu11 -std=gnu18 -Wall -Wextra -Wshadow -D_FORTIFY_SOURCE=2 -fstrict-aliasing -Wundef -Wformat -Wformat-security -Wmaybe-uninitialized -Wimplicit-function-declaration -Wredundant-decls -fPIC -O2 -Werror    -o CMakeFiles/cmTC_3f783.dir/CheckIncludeFile.c.o   -c /home/pi/st-link_flasher/stlink_flash_rasp/stlink/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_3f783
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3f783.dir/link.txt --verbose=1
+/usr/bin/cc  -std=gnu11 -std=gnu18 -Wall -Wextra -Wshadow -D_FORTIFY_SOURCE=2 -fstrict-aliasing -Wundef -Wformat -Wformat-security -Wmaybe-uninitialized -Wimplicit-function-declaration -Wredundant-decls -fPIC -O2 -Werror     CMakeFiles/cmTC_3f783.dir/CheckIncludeFile.c.o  -o cmTC_3f783 
+make[1]: Leaving directory '/home/pi/st-link_flasher/stlink_flash_rasp/stlink/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the include file sys/time.h exists passed with the following output:
+Change Dir: /home/pi/st-link_flasher/stlink_flash_rasp/stlink/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_913af/fast && /usr/bin/make -f CMakeFiles/cmTC_913af.dir/build.make CMakeFiles/cmTC_913af.dir/build
+make[1]: Entering directory '/home/pi/st-link_flasher/stlink_flash_rasp/stlink/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_913af.dir/CheckIncludeFile.c.o
+/usr/bin/cc   -std=gnu11 -std=gnu18 -Wall -Wextra -Wshadow -D_FORTIFY_SOURCE=2 -fstrict-aliasing -Wundef -Wformat -Wformat-security -Wmaybe-uninitialized -Wimplicit-function-declaration -Wredundant-decls -fPIC -O2 -Werror    -o CMakeFiles/cmTC_913af.dir/CheckIncludeFile.c.o   -c /home/pi/st-link_flasher/stlink_flash_rasp/stlink/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_913af
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_913af.dir/link.txt --verbose=1
+/usr/bin/cc  -std=gnu11 -std=gnu18 -Wall -Wextra -Wshadow -D_FORTIFY_SOURCE=2 -fstrict-aliasing -Wundef -Wformat -Wformat-security -Wmaybe-uninitialized -Wimplicit-function-declaration -Wredundant-decls -fPIC -O2 -Werror     CMakeFiles/cmTC_913af.dir/CheckIncludeFile.c.o  -o cmTC_913af 
+make[1]: Leaving directory '/home/pi/st-link_flasher/stlink_flash_rasp/stlink/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the include file unistd.h exists passed with the following output:
+Change Dir: /home/pi/st-link_flasher/stlink_flash_rasp/stlink/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_13438/fast && /usr/bin/make -f CMakeFiles/cmTC_13438.dir/build.make CMakeFiles/cmTC_13438.dir/build
+make[1]: Entering directory '/home/pi/st-link_flasher/stlink_flash_rasp/stlink/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_13438.dir/CheckIncludeFile.c.o
+/usr/bin/cc   -std=gnu11 -std=gnu18 -Wall -Wextra -Wshadow -D_FORTIFY_SOURCE=2 -fstrict-aliasing -Wundef -Wformat -Wformat-security -Wmaybe-uninitialized -Wimplicit-function-declaration -Wredundant-decls -fPIC -O2 -Werror    -o CMakeFiles/cmTC_13438.dir/CheckIncludeFile.c.o   -c /home/pi/st-link_flasher/stlink_flash_rasp/stlink/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_13438
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_13438.dir/link.txt --verbose=1
+/usr/bin/cc  -std=gnu11 -std=gnu18 -Wall -Wextra -Wshadow -D_FORTIFY_SOURCE=2 -fstrict-aliasing -Wundef -Wformat -Wformat-security -Wmaybe-uninitialized -Wimplicit-function-declaration -Wredundant-decls -fPIC -O2 -Werror     CMakeFiles/cmTC_13438.dir/CheckIncludeFile.c.o  -o cmTC_13438 
+make[1]: Leaving directory '/home/pi/st-link_flasher/stlink_flash_rasp/stlink/CMakeFiles/CMakeTmp'
+
+
+

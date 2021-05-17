@@ -1,0 +1,1 @@
+/usr/bin/cc  -std=gnu11 -std=gnu18 -Wall -Wextra -Wshadow -D_FORTIFY_SOURCE=2 -fstrict-aliasing -Wundef -Wformat -Wformat-security -Wmaybe-uninitialized -Wimplicit-function-declaration -Wredundant-decls -fPIC -O2 -Werror   CMakeFiles/st-flash-by-button.dir/src/st-flash-by-button/flash_button.c.o  -o bin/st-flash-by-button 
