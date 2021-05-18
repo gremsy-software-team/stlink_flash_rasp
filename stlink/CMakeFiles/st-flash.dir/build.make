@@ -95,6 +95,7 @@ bin/st-flash: CMakeFiles/st-flash.dir/src/st-flash/flash.c.o
 bin/st-flash: CMakeFiles/st-flash.dir/src/st-flash/flash_opts.c.o
 bin/st-flash: CMakeFiles/st-flash.dir/build.make
 bin/st-flash: lib/libstlink.so.1.7.0
+bin/st-flash: /usr/lib/libwiringPi.so
 bin/st-flash: /usr/lib/arm-linux-gnueabihf/libusb-1.0.so
 bin/st-flash: CMakeFiles/st-flash.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/pi/st-link_flasher/stlink_flash_rasp/stlink/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C executable bin/st-flash"

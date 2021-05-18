@@ -80,6 +80,7 @@ st__info_EXTERNAL_OBJECTS =
 bin/st-info: CMakeFiles/st-info.dir/src/st-info/info.c.o
 bin/st-info: CMakeFiles/st-info.dir/build.make
 bin/st-info: lib/libstlink.so.1.7.0
+bin/st-info: /usr/lib/libwiringPi.so
 bin/st-info: /usr/lib/arm-linux-gnueabihf/libusb-1.0.so
 bin/st-info: CMakeFiles/st-info.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/pi/st-link_flasher/stlink_flash_rasp/stlink/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable bin/st-info"

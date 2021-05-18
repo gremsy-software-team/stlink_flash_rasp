@@ -26,6 +26,7 @@ set(CMAKE_C_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
+  "/home/pi/st-link_flasher/stlink_flash_rasp/stlink/CMakeFiles/stlink-shared.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

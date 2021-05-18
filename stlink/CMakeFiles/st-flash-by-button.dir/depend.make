@@ -10,7 +10,6 @@ CMakeFiles/st-flash-by-button.dir/src/st-flash-by-button/flash_button.c.o: inc/v
 CMakeFiles/st-flash-by-button.dir/src/st-flash-by-button/flash_button.c.o: src/stlink-lib/chipid.h
 CMakeFiles/st-flash-by-button.dir/src/st-flash-by-button/flash_button.c.o: src/stlink-lib/commands.h
 CMakeFiles/st-flash-by-button.dir/src/st-flash-by-button/flash_button.c.o: src/stlink-lib/flash_loader.h
-CMakeFiles/st-flash-by-button.dir/src/st-flash-by-button/flash_button.c.o: src/stlink-lib/helper.h
 CMakeFiles/st-flash-by-button.dir/src/st-flash-by-button/flash_button.c.o: src/stlink-lib/libusb_settings.h
 CMakeFiles/st-flash-by-button.dir/src/st-flash-by-button/flash_button.c.o: src/stlink-lib/logging.h
 CMakeFiles/st-flash-by-button.dir/src/st-flash-by-button/flash_button.c.o: src/stlink-lib/reg.h

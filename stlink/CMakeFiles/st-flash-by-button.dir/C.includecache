@@ -15,9 +15,13 @@ string.h
 -
 sys/types.h
 -
+signal.h
+-
+wiringPi.h
+-
 stlink.h
 -
-helper.h
+unistd.h
 -
 
 /usr/include/libusb-1.0/libusb.h
@@ -81,8 +85,6 @@ stddef.h
 -
 stlink.h
 -
-
-src/stlink-lib/helper.h
 
 src/stlink-lib/libusb_settings.h
 libusb.h

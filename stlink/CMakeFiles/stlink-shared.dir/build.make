@@ -184,6 +184,7 @@ lib/libstlink.so.1.7.0: CMakeFiles/stlink-shared.dir/src/stlink-lib/sg.c.o
 lib/libstlink.so.1.7.0: CMakeFiles/stlink-shared.dir/src/stlink-lib/usb.c.o
 lib/libstlink.so.1.7.0: CMakeFiles/stlink-shared.dir/src/stlink-lib/helper.c.o
 lib/libstlink.so.1.7.0: CMakeFiles/stlink-shared.dir/build.make
+lib/libstlink.so.1.7.0: /usr/lib/libwiringPi.so
 lib/libstlink.so.1.7.0: /usr/lib/arm-linux-gnueabihf/libusb-1.0.so
 lib/libstlink.so.1.7.0: CMakeFiles/stlink-shared.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/pi/st-link_flasher/stlink_flash_rasp/stlink/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking C shared library lib/libstlink.so"

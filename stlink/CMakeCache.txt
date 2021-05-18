@@ -277,6 +277,9 @@ STLINK_MODPROBED_DIR:PATH=/etc/modprobe.d
 STLINK_UDEV_RULES_DIR:PATH=/lib/udev/rules.d
 
 //Path to a library.
+WIRINGPI_LIBRARIES:FILEPATH=/usr/lib/libwiringPi.so
+
+//Path to a library.
 pkgcfg_lib_GTK3_atk-1.0:FILEPATH=/usr/lib/arm-linux-gnueabihf/libatk-1.0.so
 
 //Path to a library.
@@ -310,7 +313,7 @@ pkgcfg_lib_GTK3_pango-1.0:FILEPATH=/usr/lib/arm-linux-gnueabihf/libpango-1.0.so
 pkgcfg_lib_GTK3_pangocairo-1.0:FILEPATH=/usr/lib/arm-linux-gnueabihf/libpangocairo-1.0.so
 
 //Dependencies for the target
-stlink-shared_LIB_DEPENDS:STATIC=general;/usr/lib/arm-linux-gnueabihf/libusb-1.0.so;
+stlink-shared_LIB_DEPENDS:STATIC=general;/usr/lib/libwiringPi.so;general;/usr/lib/arm-linux-gnueabihf/libusb-1.0.so;
 
 //Dependencies for the target
 stlink-static_LIB_DEPENDS:STATIC=general;/usr/lib/arm-linux-gnueabihf/libusb-1.0.so;

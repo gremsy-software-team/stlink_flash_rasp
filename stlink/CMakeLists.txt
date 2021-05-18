@@ -76,6 +76,9 @@ if (MSVC)
 endif ()
 
 
+
+
+
 ###
 # Main build process
 ###
@@ -151,7 +154,6 @@ if (${CMAKE_BUILD_TYPE} MATCHES "Debug")
     include(CTest)
 endif ()
 
-
 ###
 # Libraries
 ###
@@ -191,6 +193,10 @@ if (APPLE)     # ... with Apple macOS libraries
 elseif (WIN32) # ... with Windows libraries
     target_link_libraries(${STLINK_LIB_SHARED} ${LIBUSB_LIBRARY} ${SSP_LIB} wsock32 ws2_32)
 else ()
+    ####include wiringPi libraries
+    find_library(WIRINGPI_LIBRARIES NAMES wiringPi)
+    target_link_libraries(${STLINK_LIB_SHARED} ${WIRINGPI_LIBRARIES})
+    ####
     target_link_libraries(${STLINK_LIB_SHARED} ${LIBUSB_LIBRARY} ${SSP_LIB})
 endif ()
 
@@ -270,6 +276,7 @@ else ()
     target_link_libraries(st-info ${STLINK_LIB_SHARED} ${SSP_LIB})
     target_link_libraries(st-util ${STLINK_LIB_SHARED} ${SSP_LIB})
     target_link_libraries(st-trace ${STLINK_LIB_SHARED} ${SSP_LIB})
+    target_link_libraries(st-flash-by-button ${STLINK_LIB_SHARED} ${SSP_LIB})
 endif ()
 
 install(TARGETS st-flash DESTINATION ${CMAKE_INSTALL_BINDIR})

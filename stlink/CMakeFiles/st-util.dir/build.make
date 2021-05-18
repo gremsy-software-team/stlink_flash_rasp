@@ -110,6 +110,7 @@ bin/st-util: CMakeFiles/st-util.dir/src/st-util/gdb-server.c.o
 bin/st-util: CMakeFiles/st-util.dir/src/st-util/semihosting.c.o
 bin/st-util: CMakeFiles/st-util.dir/build.make
 bin/st-util: lib/libstlink.so.1.7.0
+bin/st-util: /usr/lib/libwiringPi.so
 bin/st-util: /usr/lib/arm-linux-gnueabihf/libusb-1.0.so
 bin/st-util: CMakeFiles/st-util.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/pi/st-link_flasher/stlink_flash_rasp/stlink/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking C executable bin/st-util"
