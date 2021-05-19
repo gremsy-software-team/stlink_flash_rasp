@@ -32,7 +32,7 @@ typedef struct flash_opts {
     enum connect_type connect;
 } __flash_opts;
 
-const char *path_to_hex = "/home/pi/st-link_flasher/stlink_flash_rasp/hello_world.hex";
+const char *path_to_hex = "/home/pi/Desktop/demo.bin";
 /**/ 
 #define FLASH_OPTS_INITIALIZER {0, { 0 }, NULL, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
 
@@ -63,7 +63,7 @@ int main(){
     
     /**/
     // wiringPiSetup();
-    // pinMode(button,INPUT);
+    // pinMode(button,INPUT_PUD_UP);
     // printf("Hello world\n");
     // wiringPiISR(button,INT_EDGE_RISING,&button_callback);
     /**/
@@ -122,7 +122,7 @@ int main(){
     }    
     opt.log_level = STND_LOG_LEVEL;
     opt.cmd = FLASH_CMD_NONE;
-    opt.filename = "/home/pi/st-link_flasher/stlink_flash_rasp/hello_world.hex";
+    opt.filename = path_to_hex;
     opt.addr = FLASH_ADDR;
     opt.format = FLASH_FORMAT_IHEX;
      
@@ -152,7 +152,6 @@ int main(){
         case FLASH_CMD_WRITE:
             //
 
-
             if (opt.format == FLASH_FORMAT_IHEX) {
                 err = stlink_parse_ihex(opt.filename, stlink_get_erased_pattern(sl), &mem, &size, &opt.addr);
 
@@ -163,60 +162,16 @@ int main(){
             }
             if ((opt.addr >= sl->flash_base) &&
                 (opt.addr < sl->flash_base + sl->flash_size)) {
-                if (opt.format == FLASH_FORMAT_IHEX) {
-                    err = stlink_mwrite_flash(sl, mem, (uint32_t)size, opt.addr);
-                } else {
-                    err = stlink_fwrite_flash(sl, opt.filename, opt.addr);
-                }
-
+                // if (opt.format == FLASH_FORMAT_BINARY) {
+                //     err = stlink_mwrite_flash(sl, mem, (uint32_t)size, opt.addr);
+                // } else {
+                //     err = stlink_fwrite_flash(sl, opt.filename, opt.addr);
+                // }
+                err = stlink_mwrite_flash(sl, mem, (uint32_t)size, opt.addr);
                 if (err == -1) {
                     printf("stlink_fwrite_flash() == -1\n");
                     goto on_error;
                 }
-            } else if ((opt.addr >= sl->sram_base) &&
-                    (opt.addr < sl->sram_base + sl->sram_size)) {
-                if (opt.format == FLASH_FORMAT_IHEX) {
-                    err = stlink_mwrite_sram(sl, mem, (uint32_t)size, opt.addr);
-                } else {
-                    err = stlink_fwrite_sram(sl, opt.filename, opt.addr);
-                }
-
-                if (err == -1) {
-                    printf("stlink_fwrite_sram() == -1\n");
-                    goto on_error;
-                }
-            } else if ((opt.addr >= sl->option_base) &&
-                    (opt.addr < sl->option_base + sl->option_size)) {
-                err = stlink_fwrite_option_bytes(sl, opt.filename, opt.addr);
-
-                if (err == -1) {
-                    printf("stlink_fwrite_option_bytes() == -1\n");
-                    goto on_error;
-                }
-            } else if (opt.area == FLASH_OPTION_BYTES) {
-                if (opt.val == 0) {
-                    printf("attempting to set option byte to 0, abort.\n");
-                    goto on_error;
-                }
-
-                err = stlink_write_option_bytes32(sl, opt.val);
-
-                if (err == -1) {
-                    printf("stlink_write_option_bytes32() == -1\n");
-                    goto on_error;
-                }
-            } else if (opt.area == FLASH_OPTCR) {
-                DLOG("@@@@ Write %d (%0#10x) to option control register\n", opt.val, opt.val);
-            
-                err = stlink_write_option_control_register32(sl, opt.val);
-            } else if (opt.area == FLASH_OPTCR1) {
-                DLOG("@@@@ Write %d (%0#10x) to option control register 1\n", opt.val, opt.val);
-                
-                err = stlink_write_option_control_register1_32(sl, opt.val);
-            } else if (opt.area == FLASH_OPTION_BYTES_BOOT_ADD) {
-                DLOG("@@@@ Write %d (%0#10x) to option bytes boot address\n", opt.val, opt.val);
-            
-                err = stlink_write_option_bytes_boot_add32(sl, opt.val);
             } else {
                 err = -1;
                 printf("Unknown memory region\n");
@@ -228,9 +183,7 @@ int main(){
             break;
 
         case CMD_RESET:
-            //
             if(stlink_reset(sl,RESET_AUTO)){
-                printf("Failed to reset device\n");
                 goto on_error;
             }
             printf("Reset Device\n");
