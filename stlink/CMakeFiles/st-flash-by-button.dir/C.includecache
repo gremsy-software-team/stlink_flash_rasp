@@ -19,9 +19,13 @@ signal.h
 -
 wiringPi.h
 -
+helper.h
+-
 stlink.h
 -
 unistd.h
+-
+st-flash/flash.h
 -
 
 /usr/include/libusb-1.0/libusb.h
@@ -74,6 +78,12 @@ inc/stm32.h
 
 inc/version.h
 
+src/st-flash/flash.h
+stdint.h
+-
+stlink.h
+-
+
 src/stlink-lib/chipid.h
 
 src/stlink-lib/commands.h
@@ -85,6 +95,8 @@ stddef.h
 -
 stlink.h
 -
+
+src/stlink-lib/helper.h
 
 src/stlink-lib/libusb_settings.h
 libusb.h

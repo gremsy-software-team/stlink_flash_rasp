@@ -122,8 +122,10 @@ int main(int ac, char** av) {
         if ((o.addr >= sl->flash_base) &&
             (o.addr < sl->flash_base + sl->flash_size)) {
             if (o.format == FLASH_FORMAT_IHEX) {
+                printf("\n[RASPBERRY]:format iHex\n");
                 err = stlink_mwrite_flash(sl, mem, (uint32_t)size, o.addr);
             } else {
+                printf("\n[RASPBERRY]:format BINARY\n");
                 err = stlink_fwrite_flash(sl, o.filename, o.addr);
             }
 

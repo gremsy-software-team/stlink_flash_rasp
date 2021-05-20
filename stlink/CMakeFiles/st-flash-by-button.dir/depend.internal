@@ -8,9 +8,11 @@ CMakeFiles/st-flash-by-button.dir/src/st-flash-by-button/flash_button.c.o
  inc/stlink.h
  inc/stm32.h
  inc/version.h
+ src/st-flash/flash.h
  src/stlink-lib/chipid.h
  src/stlink-lib/commands.h
  src/stlink-lib/flash_loader.h
+ src/stlink-lib/helper.h
  src/stlink-lib/libusb_settings.h
  src/stlink-lib/logging.h
  src/stlink-lib/reg.h

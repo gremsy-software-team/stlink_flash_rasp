@@ -3530,7 +3530,7 @@ int stlink_write_flash(stlink_t *sl, stm32_addr_t addr, uint8_t *base,
       ELOG("Failed to erase_flash_page(%#x) == -1\n", (unsigned)(addr + off));
       return (-1);
     }
-
+    
     ILOG("Flash page at addr: 0x%08lx erased\n", (unsigned long)(addr + off));
     page_count++;
   }

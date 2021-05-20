@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <wiringPi.h>
+
+#define button 2
+#define led 0
+
+void toggle_led(void){
+	digitalWrite(led,1^digitalRead(led));
+}
+int main(){
+	wiringPiSetupGpio();
+	pinMode(button,INPUT);
+	pinMode(led,OUTPUT);
+	//wiringPiISR(button, INT_EDGE_RISING,&toggle_led);
+	while(1){
+	;;
+		if(!digitalRead(button)){
+		
+}
+	}
+	return 1;
+
+}

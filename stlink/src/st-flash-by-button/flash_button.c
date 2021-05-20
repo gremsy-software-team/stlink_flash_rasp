@@ -3,39 +3,28 @@
 #include <string.h>
 #include <sys/types.h>
 #include <signal.h>
+
 #include <wiringPi.h>
+
+#include <helper.h>
 #include <stlink.h>
 #include <unistd.h>
+#include <st-flash/flash.h>
+
 #define button 2
+#define test_led 0
 #define DEBUG_LOG_LEVEL 100
 #define STND_LOG_LEVEL  50
 #define ENABLE_OPT      1
 #define FLASH_ADDR      (sl->flash_base) 
-/**/
-enum flash_cmd {FLASH_CMD_NONE = 0, FLASH_CMD_WRITE = 1, FLASH_CMD_READ = 2, FLASH_CMD_ERASE = 3, CMD_RESET = 4};
-enum flash_format {FLASH_FORMAT_BINARY = 0, FLASH_FORMAT_IHEX = 1};
-enum flash_area {FLASH_MAIN_MEMORY = 0, FLASH_SYSTEM_MEMORY = 1, FLASH_OTP = 2, FLASH_OPTION_BYTES = 3, FLASH_OPTION_BYTES_BOOT_ADD = 4, FLASH_OPTCR = 5, FLASH_OPTCR1 = 6};
-typedef struct flash_opts {
-    enum flash_cmd cmd;
-    uint8_t serial[STLINK_SERIAL_BUFFER_SIZE];
-    const char* filename;
-    stm32_addr_t addr;
-    size_t size;
-    int reset;
-    int log_level;
-    enum flash_format format;
-    enum flash_area area;
-    uint32_t val;
-    size_t flash_size;  // --flash=n[k, M]
-    int opt;            // enable empty tail data drop optimization
-    int freq;           // --freq=n[k, M] frequency of JTAG/SWD
-    enum connect_type connect;
-} __flash_opts;
 
-const char *path_to_hex = "/home/pi/Desktop/demo.bin";
+const char *path_to_hex = "/home/pi/st-link_flasher/stlink_flash_rasp/hex_file/demo.hex";
 /**/ 
 #define FLASH_OPTS_INITIALIZER {0, { 0 }, NULL, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
 
+/**/
+
+typedef struct flash_opts __flash_opts;
 /**/
 stlink_t* sl = NULL;
 __flash_opts opt;
@@ -54,18 +43,25 @@ static void cleanup(int signum){
     exit(1);
 }
 
-// static void button_callback(void){
-//     opt.cmd = FLASH_CMD_ERASE;
-// }
+static void button_callback(void){
+    if(opt.cmd == FLASH_CMD_NONE){
+        opt.cmd = FLASH_CMD_ERASE;
+        digitalWrite(test_led,1^digitalRead(test_led));
+    }
+    else{
+        printf("\ncan not flash device at this time\n");
+    }
+}
 
 
-int main(){
+int main(int argc, char **argv){
     
     /**/
-    // wiringPiSetup();
-    // pinMode(button,INPUT_PUD_UP);
-    // printf("Hello world\n");
-    // wiringPiISR(button,INT_EDGE_RISING,&button_callback);
+    wiringPiSetup();
+    pinMode(button,INPUT);
+    pinMode(test_led,OUTPUT);
+    wiringPiISR(button,INT_EDGE_RISING,&button_callback);
+    printf("\nButtons is Initialized\n");
     /**/
 
     int err = -1;
@@ -83,7 +79,7 @@ int main(){
         return -1;
     }
     else{
-        printf("device connected successfully :))\n");
+        printf("device connected successfully :))\r\n");
     }
 
     if(sl->flash_type == STLINK_FLASH_TYPE_UNKNOWN){
@@ -94,6 +90,7 @@ int main(){
     
     if(opt.flash_size != 0u && opt.flash_size  != sl->flash_size){
         sl->flash_size = opt.flash_size;
+        printf("Forcing flash size: --flash=0x%08X\n", (unsigned int)sl->flash_size);
     }
 
     sl->verbose = opt.log_level;
@@ -120,83 +117,100 @@ int main(){
             goto on_error;
         }
     }    
-    opt.log_level = STND_LOG_LEVEL;
     opt.cmd = FLASH_CMD_NONE;
     opt.filename = path_to_hex;
     opt.addr = FLASH_ADDR;
+
     opt.format = FLASH_FORMAT_IHEX;
      
     size_t size = 0;
 
-    printf("initialized successfull!!\n");
-
+    printf("initialized successfull!!\r\n");
+    printf("[DEFAULT] [filename] : [%s]\r\n",opt.filename);
+    
+    printf("[DEFAULT] [format] : [HEX]\r\n");
+    
+    printf("Please press the button to flash the device\r\n");
     while(1){
         switch (opt.cmd)
         {
         case FLASH_CMD_NONE:
-            
-            if(getchar()=='a'){
-                opt.cmd = FLASH_CMD_ERASE;
-            }
+            ;;            
             break;
         case FLASH_CMD_ERASE:
             //
+            printf("Start erasing chip\r\n");
             err = stlink_erase_flash_mass(sl);
             if(err == -1){
                 printf("Failed to erase chip\n");
                 goto on_error;
             }
-            printf("Erase chip finished\n");
+            printf("Erase chip finished\r\n");
             opt.cmd = FLASH_CMD_WRITE;
             break;
         case FLASH_CMD_WRITE:
             //
-
+            printf("Start flashing chip\r\n");
             if (opt.format == FLASH_FORMAT_IHEX) {
                 err = stlink_parse_ihex(opt.filename, stlink_get_erased_pattern(sl), &mem, &size, &opt.addr);
-
                 if (err == -1) {
                     printf("Cannot parse %s as Intel-HEX file\n", opt.filename);
+
                     goto on_error;
                 }
             }
             if ((opt.addr >= sl->flash_base) &&
                 (opt.addr < sl->flash_base + sl->flash_size)) {
-                // if (opt.format == FLASH_FORMAT_BINARY) {
-                //     err = stlink_mwrite_flash(sl, mem, (uint32_t)size, opt.addr);
-                // } else {
-                //     err = stlink_fwrite_flash(sl, opt.filename, opt.addr);
-                // }
-                err = stlink_mwrite_flash(sl, mem, (uint32_t)size, opt.addr);
+                if (opt.format == FLASH_FORMAT_IHEX) {
+                    printf("\n[FORMAT] IHEX\n");
+                    err = stlink_mwrite_flash(sl, mem, (uint32_t)size, opt.addr);
+
+                } 
+                
+                else {
+                    printf("\n[FORMAR] BINARY\n");
+                    err = stlink_fwrite_flash(sl, opt.filename, opt.addr);
+                }
+                
                 if (err == -1) {
                     printf("stlink_fwrite_flash() == -1\n");
                     goto on_error;
                 }
-            } else {
-                err = -1;
-                printf("Unknown memory region\n");
-                goto on_error;
-            }
-            printf("\nFlashing finished\n");
-            opt.cmd = CMD_RESET;
+            }else if ((opt.addr >= sl->sram_base) &&
+                (opt.addr < sl->sram_base + sl->sram_size)) {
+                if (opt.format == FLASH_FORMAT_IHEX) {
+                    err = stlink_mwrite_sram(sl, mem, (uint32_t)size, opt.addr);
+                } else {
+                    err = stlink_fwrite_sram(sl, opt.filename, opt.addr);
+                }
+
+                if (err == -1) {
+                    printf("stlink_fwrite_sram() == -1\n");
+                    goto on_error;
+                }
+            } 
+            printf("\nFlashing finished\r\n");
+            sleep(1);
+            opt.cmd = FLASH_CMD_NONE;
             
             break;
 
         case CMD_RESET:
             if(stlink_reset(sl,RESET_AUTO)){
+                printf("Failed to reset device\n");
                 goto on_error;
             }
             printf("Reset Device\n");
-            goto end_of_program;
-
+            //goto end_of_program;
+            opt.cmd = FLASH_CMD_NONE;
             break;
         default:
             break;
         }
-
-
         usleep(100000);
     }
+
+    return 1;
 on_error:
     stlink_exit_debug_mode(sl);
     stlink_close(sl);
@@ -204,8 +218,6 @@ on_error:
 
     return err;
 
-end_of_program: 
-    exit(1);
 
 }
 
