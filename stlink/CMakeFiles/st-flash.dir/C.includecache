@@ -28,6 +28,18 @@ stdint.h
 stlink.h
 -
 
+/home/pi/st-link_flasher/stlink_flash_rasp/stlink/src/st-flash/flash_opts.c
+stdlib.h
+-
+stdio.h
+-
+string.h
+-
+helper.h
+-
+flash.h
+/home/pi/st-link_flasher/stlink_flash_rasp/stlink/src/st-flash/flash.h
+
 /usr/include/libusb-1.0/libusb.h
 stdint.h
 -
@@ -89,6 +101,8 @@ stddef.h
 -
 stlink.h
 -
+
+src/stlink-lib/helper.h
 
 src/stlink-lib/libusb_settings.h
 libusb.h

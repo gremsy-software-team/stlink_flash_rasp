@@ -1,2 +1,9 @@
-# stlink_flash_rasp
-using raspberry pi to flash program for stm32
+# Tools for flashing types of microcontroller stm32
+
+## Introduction 
+
+## Tutorial & How-TO
+
+### Installation prerequisite
+
+### 

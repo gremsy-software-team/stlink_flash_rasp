@@ -18,11 +18,12 @@
 #define ENABLE_OPT      1
 #define FLASH_ADDR      (sl->flash_base) 
 
-const char *path_to_hex = "/home/pi/st-link_flasher/stlink_flash_rasp/hex_file/demo.hex";
+char path_to_hex[100];
 /**/ 
 #define FLASH_OPTS_INITIALIZER {0, { 0 }, NULL, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
 
 /**/
+bool buttonFlag = false;
 
 typedef struct flash_opts __flash_opts;
 /**/
@@ -44,13 +45,20 @@ static void cleanup(int signum){
 }
 
 static void button_callback(void){
+    // if(opt.cmd == FLASH_CMD_NONE){
+    //     opt.cmd = FLASH_CMD_ERASE;
+    //     digitalWrite(test_led,1^digitalRead(test_led));
+    // }
+    // else{
+    //     printf("\ncan not flash device at this time\n");
+    // }
     if(opt.cmd == FLASH_CMD_NONE){
-        opt.cmd = FLASH_CMD_ERASE;
-        digitalWrite(test_led,1^digitalRead(test_led));
+        buttonFlag = true;
     }
     else{
         printf("\ncan not flash device at this time\n");
     }
+
 }
 
 
@@ -62,8 +70,16 @@ int main(int argc, char **argv){
     pinMode(test_led,OUTPUT);
     wiringPiISR(button,INT_EDGE_RISING,&button_callback);
     printf("\nButtons is Initialized\n");
+    /*search for hex file*/
+    memset(path_to_hex,'\0',100);
+    if(argc > 0){
+        printf("Insert file successfullly!!\n");
+        strcpy(path_to_hex,argv[1]);
+        //printf("%s\n",path_to_hex);
+    }else{
+        printf("Please insert the hex file you want to flash");
+    }
     /**/
-
     int err = -1;
     uint8_t * mem = NULL;
 
@@ -71,11 +87,8 @@ int main(int argc, char **argv){
     opt.connect = CONNECT_NORMAL;
 
     sl = stlink_open_usb(opt.log_level,opt.connect,(char*)opt.serial,opt.freq);
-
-
     if(sl == NULL){
         printf("can not detect any device\n");
-        printf("please check the connection again\n");
         return -1;
     }
     else{
@@ -86,8 +99,7 @@ int main(int argc, char **argv){
         printf("Failed to connect to target\n");
         return -1;
     }
-    
-    
+
     if(opt.flash_size != 0u && opt.flash_size  != sl->flash_size){
         sl->flash_size = opt.flash_size;
         printf("Forcing flash size: --flash=0x%08X\n", (unsigned int)sl->flash_size);
@@ -103,20 +115,20 @@ int main(int argc, char **argv){
     signal(SIGSEGV,&cleanup);
 
 
-    if (stlink_current_mode(sl) == STLINK_DEV_DFU_MODE) {
-        if (stlink_exit_dfu_mode(sl)) {
-            printf("Failed to exit DFU mode\n");
-            goto on_error;
-        }
-    }
+    // if (stlink_current_mode(sl) == STLINK_DEV_DFU_MODE) {
+    //     if (stlink_exit_dfu_mode(sl)) {
+    //         printf("Failed to exit DFU mode\n");
+    //         goto on_error;
+    //     }
+    // }
 
 
-    if (stlink_current_mode(sl) != STLINK_DEV_DEBUG_MODE) {
-        if (stlink_enter_swd_mode(sl)) {
-            printf("Failed to enter SWD mode\n");
-            goto on_error;
-        }
-    }    
+    // if (stlink_current_mode(sl) != STLINK_DEV_DEBUG_MODE) {
+    //     if (stlink_enter_swd_mode(sl)) {
+    //         printf("Failed to enter SWD mode\n");
+    //         goto on_error;
+    //     }
+    // }    
     opt.cmd = FLASH_CMD_NONE;
     opt.filename = path_to_hex;
     opt.addr = FLASH_ADDR;
@@ -135,7 +147,26 @@ int main(int argc, char **argv){
         switch (opt.cmd)
         {
         case FLASH_CMD_NONE:
-            ;;            
+            if(buttonFlag){
+                //get in debug mode 
+                if (stlink_current_mode(sl) == STLINK_DEV_DFU_MODE) {
+                    if (stlink_exit_dfu_mode(sl)) {
+                        printf("Failed to exit DFU mode\n");
+                        goto on_error;
+                    }
+                }
+                if (stlink_current_mode(sl) != STLINK_DEV_DEBUG_MODE) {
+                    if (stlink_enter_swd_mode(sl)) {
+                        printf("Failed to enter SWD mode\n");
+                        goto on_error;
+                    }
+                }                
+                buttonFlag = false;
+                opt.cmd = FLASH_CMD_ERASE;
+            }
+            else{
+                ;;
+            }
             break;
         case FLASH_CMD_ERASE:
             //
@@ -155,7 +186,6 @@ int main(int argc, char **argv){
                 err = stlink_parse_ihex(opt.filename, stlink_get_erased_pattern(sl), &mem, &size, &opt.addr);
                 if (err == -1) {
                     printf("Cannot parse %s as Intel-HEX file\n", opt.filename);
-
                     goto on_error;
                 }
             }
@@ -163,6 +193,7 @@ int main(int argc, char **argv){
                 (opt.addr < sl->flash_base + sl->flash_size)) {
                 if (opt.format == FLASH_FORMAT_IHEX) {
                     printf("\n[FORMAT] IHEX\n");
+                    printf("0x%08X\n",(unsigned int)opt.addr);
                     err = stlink_mwrite_flash(sl, mem, (uint32_t)size, opt.addr);
 
                 } 
@@ -190,7 +221,6 @@ int main(int argc, char **argv){
                 }
             } 
             printf("\nFlashing finished\r\n");
-            sleep(1);
             opt.cmd = FLASH_CMD_NONE;
             
             break;
@@ -199,10 +229,17 @@ int main(int argc, char **argv){
             if(stlink_reset(sl,RESET_AUTO)){
                 printf("Failed to reset device\n");
                 goto on_error;
+            }else{
+                /*exit from debug mode for uC Run*/
+                stlink_exit_debug_mode(sl);
+                stlink_close(sl);
+                free(mem);   
+
+                printf("Reset Device\n");
+                //goto end_of_program;
+                opt.cmd = FLASH_CMD_NONE;
+            
             }
-            printf("Reset Device\n");
-            //goto end_of_program;
-            opt.cmd = FLASH_CMD_NONE;
             break;
         default:
             break;
